@@ -1,4 +1,6 @@
-var jewel = {};
+var jewel = {
+    screens :{}
+};
 // wait until main document is loaded
 window.addEventListener("load", function()
 {
