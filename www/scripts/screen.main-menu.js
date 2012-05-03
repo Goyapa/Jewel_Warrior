@@ -6,7 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 jewel.screens["main-menu"] = (function() {
-    var dom = jewel.game,
+    var dom = jewel.dom,
+        game = jewel.game,
         firstRun = true;
     function setup() {
         dom.bind("#main-menu ul.menu", "click",
