@@ -5,7 +5,7 @@
  * Time: 20:15
  * To change this template use File | Settings | File Templates.
  */
-jewel.game = (function() {
+jewel.game = (function () {
     var dom = jewel.dom,
         $ = dom.$;
     // hide the active screen ( if any) and show the screen
@@ -16,10 +16,14 @@ jewel.game = (function() {
         if (activeScreen) {
             dom.removeClass(screen, "active");
         }
+        // run the scrren module
+        jewel.screens[screenId].run();
+        // display the screen html
         dom.addClass(screen, "active");
     }
+
     // expose public methods
     return {
-        showScreen : showScreen
+        showScreen:showScreen
     };
-}) ();
+})();
